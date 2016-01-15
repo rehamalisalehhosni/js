@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alien Fighter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>        
+        <div id="loader">
+            <form >
+                <label class="block">Player Name</label>
+                <input type="text" value="" placeholder="please Enter Name" id="name"/><span id="rq"></span> 
+                <label class="block">choose character </label>
+                <ul class="alians">
+                    <li onclick="choose_alians(1)" id="alian_1">
+                        <img src="img/char1.gif" alt="" title="" />
+                    </li>
+                    <li  onclick="choose_alians(2)"  id="alian_2">
+                        <img src="img/char2.gif" alt="" title=""/>
+                    </li>
+                </ul>
+                <input type="hidden" name="alians" value="" id="alian_choose"/>
+                <input type="button" name="Start" value="Start Game" id="Start_Game" onclick="StartGame()"/>
+            </form>
+            <audio id="intro"  autoplay loop >
+                <source src="audio\Space_Is_Fun__animated_music_video__MrWeebl.mp3" type="audio/mpeg">
+                </source>
+            </audio><br/>
+        </div>
+        <div id="container">
+            <audio id="lvl1Theme"   loop>
+                <source src="audio\07-stage-2-stage-5.mp3" type="audio/mpeg" >
+                </source>
+            </audio><br/>
+            <div id="youlose">
+                you Lose
+              <button id="playAgain"  type="button" onclick="tryAgin()" >try again</button>
+            
+            </div>
+            <div id="win">
+                you Win
+            </div>
+            <div class="data"><img src="img/heart.png" /><span id="life"></span></div>
+            <div class="data"><img src="img/coin.png" /><span id="score">0</span></div>
+            <div class="data">level <span id="level"></span></div>
+            <div class="time"><img src="img/clock-icon.png" /><span  id="timer"></span></div> 
+            <div id="aliens"></div>
+        </div>
+        <!-- magdii -->
+        <div id ="gameOver" >
+            <p id="gameOverParagraph" style="margin : 30px ;">Game over <p>
+            <div id="planet">
+                <img src="img/mars.png" width="100" height="100">
+            </div>
+            <button id="playAgain"  type="button" onclick="index.html" >play again</button>
+        </div>
+        <!-- /magdii -->
+        <script type="text/javascript" src="js/javascript_score.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <script type="text/javascript" src="js/javascript_check.js"></script>
+        <script type="text/javascript" src="js/javascript_out.js"></script>
+    </body>
+</html>
